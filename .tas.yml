@@ -3,10 +3,6 @@ framework: jest
 preRun:
      command:
         - npm ci
-        - npm run build
-        - npm run check-types
-        - npm run format:check
-        - npm run lint
 preMerge:
   pattern:
     - "./test/**/*.spec.ts"
