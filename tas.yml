@@ -1,0 +1,20 @@
+---
+framework: jest
+preRun:
+     command:
+        - npm ci
+        - npm run build
+        - npm run check-types
+        - npm run format:check
+        - npm run lint
+preMerge:
+  pattern:
+    - "./test/**/*.spec.ts"
+postMerge:
+  pattern:
+    - "./test/**/*.spec.ts"
+postRun:
+     command:
+        - node --version
+configFile: jest.config.js
+version: 1.0
