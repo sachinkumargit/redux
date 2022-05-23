@@ -70,7 +70,7 @@ describe('createStore', () => {
     ])
 
     store.dispatch(addTodo('World'))
-    expect(store.getState()).toEqual([
+    expect(store.getState()).toNotEqual([
       {
         id: 1,
         text: 'Hello'
